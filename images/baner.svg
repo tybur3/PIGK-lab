@@ -1,0 +1,15 @@
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+			<defs>
+			  <pattern id="pattern" width="100" height="100" viewBox="0 0 40,40" patternUnits="userSpaceOnUse" patternTransform="rotate(127) ">
+				<rect id="pattern-background" width="400%" height="400%" fill="#72a744"/>
+				<path filter="url(#filter1pattern)" fill="#f37353" d="M0 0 h40 v40 h-40 z"/>
+				<path fill="#EBEBEB" d="M-40 0 h1 l12 20 l-12 20 h-1 l12 -20zM-38 0 h1 l12 20 l-12 20 h-1 l12 -20zM-36 0 h1 l12 20 l-12 20 h-1 l12 -20zM-34 0 h1 l12 20 l-12 20 h-1 l12 -20zM-32 0 h1 l12 20 l-12 20 h-1 l12 -20zM-30 0 h1 l12 20 l-12 20 h-1 l12 -20zM-28 0 h1 l12 20 l-12 20 h-1 l12 -20zM-26 0 h1 l12 20 l-12 20 h-1 l12 -20zM-24 0 h1 l12 20 l-12 20 h-1 l12 -20zM-22 0 h1 l12 20 l-12 20 h-1 l12 -20zM-20 0 h1 l12 20 l-12 20 h-1 l12 -20zM-18 0 h1 l12 20 l-12 20 h-1 l12 -20zM-16 0 h1 l12 20 l-12 20 h-1 l12 -20zM-14 0 h1 l12 20 l-12 20 h-1 l12 -20zM-12 0 h1 l12 20 l-12 20 h-1 l12 -20zM-10 0 h1 l12 20 l-12 20 h-1 l12 -20zM-8 0 h1 l12 20 l-12 20 h-1 l12 -20zM-6 0 h1 l12 20 l-12 20 h-1 l12 -20zM-4 0 h1 l12 20 l-12 20 h-1 l12 -20zM-2 0 h1 l12 20 l-12 20 h-1 l12 -20zM0 0 h1 l12 20 l-12 20 h-1 l12 -20zM2 0 h1 l12 20 l-12 20 h-1 l12 -20zM4 0 h1 l12 20 l-12 20 h-1 l12 -20zM6 0 h1 l12 20 l-12 20 h-1 l12 -20zM8 0 h1 l12 20 l-12 20 h-1 l12 -20zM10 0 h1 l12 20 l-12 20 h-1 l12 -20zM12 0 h1 l12 20 l-12 20 h-1 l12 -20zM14 0 h1 l12 20 l-12 20 h-1 l12 -20zM16 0 h1 l12 20 l-12 20 h-1 l12 -20zM18 0 h1 l12 20 l-12 20 h-1 l12 -20zM20 0 h1 l12 20 l-12 20 h-1 l12 -20zM22 0 h1 l12 20 l-12 20 h-1 l12 -20zM24 0 h1 l12 20 l-12 20 h-1 l12 -20zM26 0 h1 l12 20 l-12 20 h-1 l12 -20zM28 0 h1 l12 20 l-12 20 h-1 l12 -20zM30 0 h1 l12 20 l-12 20 h-1 l12 -20zM32 0 h1 l12 20 l-12 20 h-1 l12 -20zM34 0 h1 l12 20 l-12 20 h-1 l12 -20zM36 0 h1 l12 20 l-12 20 h-1 l12 -20zM38 0 h1 l12 20 l-12 20 h-1 l12 -20z"/>
+			  </pattern>
+			  <filter id="filter1pattern">
+				<feTurbulence baseFrequency="0.1" numOctaves="2" result="result1" type="fractalNoise"/>
+				<feDisplacementMap in2="result1" scale="1" result="result2" xChannelSelector="R" in="SourceGraphic"/>
+				<feComposite in2="result2" in="SourceGraphic" operator="atop" result="fbSourceGraphic"/>
+			  </filter>
+			</defs>
+			<rect fill="url(#pattern)" height="100%" width="100%"/>
+		  </svg>
