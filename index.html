@@ -10,9 +10,6 @@
 	<script src="jquery-ui/external/jquery/jquery.js"></script>
 	<script src="jquery-ui/jquery-ui.js"></script>
 	<script src="scripts/main.js"></script>
-	<style type="text/css">
-
-	</style>
 </head>
 
 <body>
@@ -120,12 +117,82 @@
 					<div id="accordion">
 						<h3>Section 1</h3>
 						<div>
-						  <p>
-						  Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-						  ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-						  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-						  odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-						  </p>
+							<div id="tabs">
+								<ul>
+								  <li><a href="#tabs-1">Tabela</a></li>
+								  <li><a href="#tabs-2">Sterowanie</a></li>
+								</ul>
+								<div id="tabs-1">
+
+									<div id="dialog-form" title="Dodaj nowy samochód">
+										<p class="validateTips">Wszystkie pola formularza są wymagane.</p>
+									   
+										<form>
+										  <fieldset>
+											<label for="text">Marka</label>
+											<div class="controlgroup">
+												<select id="name">
+												  <option>Audi</option>
+												  <option>Mercedes</option>
+												  <option>Opel</option>
+												  <option>Fiat</option>
+												  <option>BMW</option>
+												  <option>Peugeot</option>
+												</select>
+											</div>
+											<!-- <input type="text" name="name" id="name"  class="text ui-widget-content ui-corner-all"> -->
+											<label for="text">Model</label>
+											<input type="text" name="name" id="email"  class="text ui-widget-content ui-corner-all">
+											<label for="text">Rocznik</label>
+											<input type="number" name="year" id="year" class="text ui-widget-content ui-corner-all">
+									   
+											<!-- Allow form submission with keyboard without duplicating the dialog button -->
+											<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+										  </fieldset>
+										</form>
+									  </div>
+
+									<div id="cars-contain" class="ui-widget">
+										<table id="users" class="ui-widget ui-widget-content">
+										  <thead>
+											<tr class="ui-widget-header ">
+											  <th>Marka</th>
+											  <th>Model</th>
+											  <th>Rocznik</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>Opel</td>
+											  <td>Corsa</td>
+											  <td>2000</td>
+											</tr>
+										  </tbody>
+										</table>
+									  </div>
+									  <button id="create-car">Dodaj nowy samochód</button>
+ 
+								</div>
+								<div id="tabs-2">
+								  <p>
+									<label for="amount">Temperatura:</label>
+									<input type="text" id="amountTemperature" readonly style="border:0; color:#f6931f; font-weight:bold;">
+								  </p>
+								  <!-- <div id="slider-vertical" style="height:100px;"></div> -->
+								  <div id="sliderTemperature"></div>
+								  <p>
+									<label for="amount">Wilgotność:</label>
+									<input type="text" id="amountHumidity" readonly style="border:0; color:#f6931f; font-weight:bold;">
+								  </p>
+								  <div id="sliderHumidity"></div>
+								  <p>
+									<label for="amount">Jakość powietrza</label>
+									<input type="text" id="amountAIQ" readonly style="border:0; color:#f6931f; font-weight:bold;">
+								  </p>
+								  <div id="sliderAIQ"></div>
+
+								</div>
+							  </div>
 						</div>
 						<h3>Section 2</h3>
 						<div>
@@ -199,6 +266,7 @@
 			</div>
 		</div>
 	</div>
+	
 
 </body>
 
