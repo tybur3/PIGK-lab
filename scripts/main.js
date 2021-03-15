@@ -31,8 +31,11 @@ $(function () {
       updateTips(
         'Długość ' + n + ' musi być pomiędzy ' + min + ' a ' + max + '.'
       );
+      // $('#dialog-form').parent().effect('shake');
+      $(o).effect('shake');
       return false;
     } else {
+      o.addClass('state-accept');
       return true;
     }
   }
@@ -41,8 +44,10 @@ $(function () {
     if (!regexp.test(o.val())) {
       o.addClass('ui-state-error');
       updateTips(n);
+      $(o).effect('shake');
       return false;
     } else {
+      o.addClass('state-accept');
       return true;
     }
   }
@@ -50,6 +55,7 @@ $(function () {
   function addUser() {
     var valid = true;
     allFields.removeClass('ui-state-error');
+    allFields.removeClass('state-accept');
 
     valid = valid && checkLength(model, 'modelu', 1, 80);
     valid = valid && checkLength(year, 'year', 4, 4);
@@ -71,7 +77,9 @@ $(function () {
 
     if (valid) {
       $('#users tbody').append(
-        '<tr>' +
+        '<tr class="table-style table-last">' +
+          '<td><button id="hide">x</button></td>' +
+          '<td></td>' +
           '<td>' +
           marka.val() +
           '</td>' +
@@ -81,6 +89,7 @@ $(function () {
           '<td>' +
           year.val() +
           '</td>' +
+          '<td><button id="DeleteButton">Usuń</button></td>' +
           '</tr>'
       );
       dialog.dialog('close');
@@ -94,7 +103,10 @@ $(function () {
     width: 350,
     modal: true,
     buttons: {
-      Dodaj: addUser,
+      Dodaj: () => {
+        addUser(), $('.table-last:last-child').show('slow');
+        $('.table-last:last-child').css('display', 'table-row');
+      },
       Anuluj: function () {
         dialog.dialog('close');
       },
@@ -102,6 +114,7 @@ $(function () {
     close: function () {
       form[0].reset();
       allFields.removeClass('ui-state-error');
+      allFields.removeClass('state-accept');
     },
   });
 
@@ -267,3 +280,55 @@ $(function () {
 });
 
 //zad5
+
+$(function () {
+  function handleShape(e) {
+    $('.table-style')
+      // .removeClass( "circle pill square rectangle" )
+      .addClass($(e.target).val());
+  }
+  function handleToggle(e) {
+    var target = $(e.target);
+
+    if (target.is('.brand-toggle')) {
+      var checked = target.is(':checked'),
+        value = $("[name='brand']")
+          .filter(':checked')
+          .attr('data-' + target[0].id);
+      $('.table-style').css(target[0].id, checked ? value : '');
+    } else {
+      $('.table-style').toggleClass(target[0].id, target.is(':checked'));
+    }
+  }
+  $('.toggle').on('change', handleToggle);
+});
+
+//zad7
+
+//zad8
+
+$(function () {
+  $(document).on('click', '#DeleteButton', function () {
+    // console.log($(this).text());
+    // $(this).parent().parent().hide('slow');
+    $(this).parent().parent().remove();
+  });
+});
+
+//zad9
+
+$(function () {
+  $(document).on('click', '#hide', function () {
+    // console.log($(this).text());
+    $(this).parent().parent().hide('slow');
+    // $(this).parent().parent().remove();
+  });
+});
+
+$(function () {
+  $(document).on('click', '#unhide', function () {
+    // console.log($(this).text());
+    $('.table-style').show('slow');
+    // $(this).parent().parent().remove();
+  });
+});

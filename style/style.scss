@@ -576,3 +576,85 @@ div#users-contain table th {
   border: 1px solid transparent;
   padding: 0.3em;
 }
+
+//Lab3
+//zad5,6
+
+tr.table-style td {
+  padding: 3px;
+}
+
+tr.active:nth-child(even):hover td {
+  border-top: 2.5px solid darken($baner, $amount: 30%);
+  border-bottom: 2.5px solid darken($baner, $amount: 30%);
+  padding: 0 3px;
+
+  background-color: lighten($baner, $amount: 20%);
+  color: darken($baner, $amount: 30%);
+
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+tr.active:nth-child(odd):hover td {
+  border-top: 2px solid lighten($baner, $amount: 5%);
+  border-bottom: 2px solid lighten($baner, $amount: 5%);
+  padding: 1px 3px;
+
+  background-color: lighten($baner, $amount: 30%);
+  color: darken($baner, $amount: 30%);
+
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.active:nth-child(even) {
+  animation: checked 0.5s forwards;
+  animation-iteration-count: 1;
+}
+
+// .active:nth-child(even):hover {
+//   animation: pulse2 0 forwards;
+//   animation-iteration-count: 1;
+// }
+
+@keyframes checked {
+  0% {
+  }
+  100% {
+    background-color: $light-gray;
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    background-color: #ff4136;
+    border: 0;
+  }
+  100% {
+    background-color: lighten($baner, $amount: 20%);
+    color: darken($baner, $amount: 30%);
+  }
+}
+
+//Zad 7
+.table-last:last-child {
+  display: none;
+}
+
+//zad10
+
+input.state-accept {
+  animation: accept 0.7s forwards;
+}
+
+@keyframes accept {
+  0% {
+    border: 1px solid #f1a899;
+    background: #fddfdf;
+    color: #5f3f3f;
+  }
+  100% {
+    background: #bcf4de;
+    color: #498467;
+    border-color: #96bbbb;
+  }
+}

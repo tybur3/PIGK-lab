@@ -472,4 +472,108 @@ div#users-contain table th {
   border: 1px solid transparent;
   padding: 0.3em;
 }
+
+tr.table-style td {
+  padding: 3px;
+}
+
+tr.active:nth-child(even):hover td {
+  border-top: 2.5px solid #a2290b;
+  border-bottom: 2.5px solid #a2290b;
+  padding: 0 3px;
+  background-color: #fac1b2;
+  color: #a2290b;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+tr.active:nth-child(odd):hover td {
+  border-top: 2px solid #f5866b;
+  border-bottom: 2px solid #f5866b;
+  padding: 1px 3px;
+  background-color: #fde7e2;
+  color: #a2290b;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.active:nth-child(even) {
+  -webkit-animation: checked 0.5s forwards;
+          animation: checked 0.5s forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes checked {
+  0% {
+  }
+  100% {
+    background-color: #ebebeb;
+  }
+}
+
+@keyframes checked {
+  0% {
+  }
+  100% {
+    background-color: #ebebeb;
+  }
+}
+
+@-webkit-keyframes pulse2 {
+  0% {
+    background-color: #ff4136;
+    border: 0;
+  }
+  100% {
+    background-color: #fac1b2;
+    color: #a2290b;
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    background-color: #ff4136;
+    border: 0;
+  }
+  100% {
+    background-color: #fac1b2;
+    color: #a2290b;
+  }
+}
+
+.table-last:last-child {
+  display: none;
+}
+
+input.state-accept {
+  -webkit-animation: accept 0.7s forwards;
+          animation: accept 0.7s forwards;
+}
+
+@-webkit-keyframes accept {
+  0% {
+    border: 1px solid #f1a899;
+    background: #fddfdf;
+    color: #5f3f3f;
+  }
+  100% {
+    background: #bcf4de;
+    color: #498467;
+    border-color: #96bbbb;
+  }
+}
+
+@keyframes accept {
+  0% {
+    border: 1px solid #f1a899;
+    background: #fddfdf;
+    color: #5f3f3f;
+  }
+  100% {
+    background: #bcf4de;
+    color: #498467;
+    border-color: #96bbbb;
+  }
+}
 /*# sourceMappingURL=style.css.map */
